@@ -4,7 +4,7 @@
 // FACET - UFGD
 // 
 // Intuito do código: Contar através de Threads os números primos gerados aleatoriamente em uma matriz
-// Foi considerado o modo serial sendo nThreads = 1
+// Foi considerado o modo serial sendo nThreads = 1 e a submatriz = matriz
 //
 
 #include <iostream>
@@ -321,7 +321,8 @@ int sub(int linha_sub, int coluna_sub, int linha_matriz, int coluna_matriz){
     return quantidade_inteira;
 }
 
-//verifica se o número é primo ou não usando a relação de que os números primos maiores que 3 sempre são de ordem 6k+-1
+//verifica se o número é primo ou não usando a relação de que os números primos maiores que 3 sempre são de ordem 6k+-1, código retirado de 
+// https://en.wikipedia.org/wiki/Primality_test
 bool VER_PRIMO(int primo) {
     if (primo == 2 || primo == 3)
         return true;
